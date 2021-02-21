@@ -18,10 +18,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness", {
 
 // for routes
 
-app.use(require("./Develop/public/api.js"));
+app.use(require("./public/api.js"));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "/Develop/public/index.html"));
+    res.sendFile(path.join(__dirname + "/public/index.html"));
   });
 
 app.listen(PORT, () => {
